@@ -1,6 +1,6 @@
-This example contains a simple utility class to simplify opening database
-connections in Java applications, such as the one you will write to build
-your Lucene index. 
+CS 144 Project Part 3
 
-To build and run the sample code, use the "run" ant target inside
-the directory with build.xml by typing "ant run".
+Design Choices
+
+We are creating one index where each document represents an item. Each document will have three fields: ItemID, Name, and the concatenation of Name, Category, and Description. We designed the index this way because we need to return ItemID and Name, so we saved them in their own separate field. The concatenation field is used for keyword-based searching.
+
