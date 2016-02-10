@@ -47,9 +47,6 @@ public class Indexer {
     }
 
     public void rebuildIndexes() throws Exception {
-
-        Connection conn = null;
-
         // create a connection to the database to retrieve Items from MySQL
         try {
             conn = DbManager.getConnection(true);
