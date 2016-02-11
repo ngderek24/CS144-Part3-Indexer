@@ -6,10 +6,8 @@ CREATE TABLE ItemLocationPoint (
 
 insert into ItemLocationPoint (ItemID, LocationPoint)
 select ItemID, Point(Latitude, Longitude)
-from Items i, LocationInfo l
-where i.Location = l.Location 
-and i.Country = l.Country
-and Latitude is not NULL
+from Items i
+where Latitude is not NULL
 and Longitude is not NULL;
 
 CREATE SPATIAL INDEX locationIndex ON ItemLocationPoint (LocationPoint);
